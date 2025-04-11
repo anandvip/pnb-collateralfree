@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collateral-Free Loans under NABARD & RBI for Farming Community</title>
+    <style>
+        :root {
+            --primary-color: #1e6f2f;
+            --secondary-color: #f4a742;
+            --tertiary-color: #e6f2e8;
+            --dark-color: #333;
+            --light-color: #fff;
+            --border-color: #ccc;
+            --highlight-color: #ffed8a;
+            --link-color: #0a582d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .govt-logo {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        .logo-container {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .logo-container img {
+            height: 60px;
+            margin-bottom: 5px;
+        }
+        
+        main {
+            padding: 30px 0;
+        }
+        
+        .accordion {
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-header {
+            background-color: var(--tertiary-color);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+        
+        .accordion-header:hover {
+            background-color: #dae8dc;
+        }
+        
+        .accordion-header h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+        
+        .accordion-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            background-color: var(--light-color);
+        }
+        
+        .accordion-content-inner {
+            padding: 20px;
+        }
+        
+        .accordion.active .accordion-content {
+            padding: 0;
+            max-height: 1500px;
+        }
+        
+        .highlight {
+            background-color: var(--highlight-color);
+            padding: 2px 5px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        
+        .info-box {
+            background-color: var(--tertiary-color);
+            border-left: 5px solid var(--primary-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        strong {
+            color: var(--primary-color);
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid var(--border-color);
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 10px 15px;
+            background-color: var(--light-color);
+        }
+        
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 5px solid var(--secondary-color);
+        }
+        
+        .sources {
+            margin-top: 30px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+        
+        .sources h3 {
+            margin-bottom: 15px;
+        }
+        
+        .source-links a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        
+        .source-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .updated-info {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .accordion-header h2 {
+                font-size: 1.1rem;
+            }
+            
+            .govt-logo {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Collateral-Free Loans under NABARD & RBI for Farming Community</h1>
+            <p>Kisan Credit Card (KCC) Scheme in Haryana – 2025 Update</p>
+            <div class="govt-logo">
+                <div class="logo-container">
+                    <div style="color: white; font-size: 18px;">NABARD</div>
+                    <div style="color: #f4a742; font-size: 12px;">National Bank for Agriculture and Rural Development</div>
+                </div>
+                <div class="logo-container">
+                    <div style="color: white; font-size: 18px;">RBI</div>
+                    <div style="color: #f4a742; font-size: 12px;">Reserve Bank of India</div>
+                </div>
+                <div class="logo-container">
+                    <div style="color: white; font-size: 18px;">KCC</div>
+                    <div style="color: #f4a742; font-size: 12px;">Kisan Credit Card</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Collateral-Free Loan Limit for Farmers</h2>
+                <button class="accordion-button">+</button>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    <p>Under the KCC scheme, <strong>loans up to ₹2 lakh per farmer are now collateral-free</strong>. This limit was previously ₹1.6 lakh but was <strong>raised to ₹2 lakh</strong> to enhance credit access for small farmers.</p>
+                    
+                    <div class="info-box">
+                        <p><strong>Important Note:</strong> The higher figure of ₹5 lakh is <strong>not</strong> the collateral-free limit – it refers to a different aspect of the scheme (the limit for interest subsidy).</p>
+                    </div>
+                    
+                    <p>For loans above ₹2 lakh, banks generally require collateral, except in specific tie-up cases (for example, some dairy farmers with a tri-partite agreement involving milk unions may get up to ₹3 lakh without traditional collateral).</p>
+                    
+                    <p>This collateral waiver up to ₹2 lakh is implemented across all banks effective January 1, 2025, as per RBI's instructions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>NABARD and Banks: Policy Arrangements in Haryana</h2>
+                <button class="accordion-button">+</button>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    <p>The KCC scheme is a <strong>national program</strong> administered through a partnership of NABARD, RBI, and all rural lending institutions.</p>
+                    
+                    <p><strong>NABARD (National Bank for Agriculture and Rural Development)</strong> played a key role in formulating the KCC scheme in 1998 and provides ongoing support and oversight.</p>
+                    
+                    <p>In Haryana, as in other states, KCC is implemented by all major banks – including public and private sector commercial banks, Regional Rural Banks (RRBs), and cooperative banks – under the broad guidelines set by RBI and NABARD.</p>
+                    
+                    <h3>NABARD's Support Mechanism:</h3>
+                    <p>NABARD supports these banks by providing <strong>refinance facilities</strong>:</p>
+                    <ul>
+                        <li>NABARD extends <strong>100% short-term refinance to cooperative banks and RRBs</strong> for crop loans disbursed under KCC, ensuring those banks have sufficient funds to lend to farmers.</li>
+                        <li>Policy coordination happens through state-level banking committees (SLBC) and district-level forums, where NABARD and bank officials work together to monitor KCC outreach and resolve operational issues.</li>
+                    </ul>
+                    
+                    <p>In summary, <strong>NABARD sets policy, provides financial backing, and monitors progress, while banks in Haryana directly issue KCC loans to eligible farmers</strong> in line with the scheme's guidelines.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Loan Eligibility and Scheme Coverage</h2>
+                <button class="accordion-button">+</button>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    <p><strong>Who is eligible for a Kisan Credit Card?</strong> The scheme covers a broad range of farmers in Haryana:</p>
+                    
+                    <ul>
+                        <li><strong>Farmers (owner-cultivators)</strong> – individuals or joint borrowers who own and cultivate agricultural land.</li>
+                        <li><strong>Tenant Farmers and Sharecroppers</strong> – those who cultivate land on lease or sharecropping arrangements are also eligible.</li>
+                        <li><strong>Joint Liability Groups (JLGs) or Self-Help Groups (SHGs)</strong> of farmers – including tenant farmers or sharecroppers organized in groups – can avail a group KCC.</li>
+                        <li><strong>Farmers in Allied Activities</strong> – Since 2019, the KCC facility has been <strong>extended to farmers engaged in allied sectors</strong> like animal husbandry, dairy, and fisheries. This means fishers, dairy farmers, poultry farmers, etc., can also get KCC loans for their working capital needs. (They must meet simple criteria such as owning or working in those activities.)</li>
+                    </ul>
+                    
+                    <div class="info-box">
+                        <p>In practice, virtually any cultivator or farmer in Haryana – whether cultivating their own land or someone else's – can apply for a KCC through a bank, provided they can demonstrate their farming activity. The scheme's aim is to <strong>ensure all types of farmers have access to timely, adequate credit</strong> for agriculture and related activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Credit Limits and Loan Features</h2>
+                <button class="accordion-button">+</button>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    <p>Each Kisan Credit Card comes with a <strong>credit limit</strong> determined by the farmer's needs and crop pattern. The bank assesses the cost of cultivation, cropping area, and other expenses to sanction an appropriate credit limit.</p>
+                    
+                    <h3>Flexible Credit Limit:</h3>
+                    <p>The KCC operates as a revolving credit account (cash credit), typically valid for <strong>5 years</strong> subject to annual review. The limit for the first year is set based on the farmer's cultivation requirements (cost of seeds, fertilizers, etc., plus contingency expenses and some consumption needs).</p>
+                    
+                    <p>The limit may be increased in subsequent years to accommodate larger needs or higher input costs. There is <strong>no fixed maximum cap on a KCC loan</strong> – it depends on the scale of operations – but most small farmers' requirements are within a few lakhs of rupees.</p>
+                    
+                    <h3>Interest Rate and Subsidy Limit:</h3>
+                    <p>As of 2025, the <strong>government's interest subsidy (concessional rate)</strong> applies to KCC loans up to <strong>₹5 lakh</strong> per farmer. Previously, the interest concession was capped at ₹3 lakh, but the Union Budget 2025-26 announced an increase in the <strong>KCC credit limit eligible for interest subvention from ₹3 lakh to ₹5 lakh</strong>.</p>
+                    
+                    <div class="info-box">
+                        <p><strong>Important:</strong> This ₹5 lakh figure is <strong>not</strong> the collateral-free threshold, but the upper limit of loan amount that can receive interest subsidy under the scheme.</p>
+                    </div>
+                    
+                    <h3>Collateral Requirements:</h3>
+                    <p>As noted, <strong>no collateral is needed for KCC loans up to ₹2 lakh</strong>. For loan amounts <strong>above ₹2 lakh</strong>, farmers generally have to provide security (such as land mortgage or third-party guarantee) as per the lending bank's norms.</p>
+                    
+                    <p>One exception is if there is a structured tie-up (e.g. a dairy farmer selling to a milk cooperative under a tripartite agreement); in such cases, some banks may issue slightly higher limits (beyond ₹2 lakh) without additional collateral because the repayment is secured through the tie-up arrangement. Otherwise, standard collateral rules apply beyond ₹2 lakh to protect the bank's loan.</p>
+                    
+                    <h3>Term Loan Component:</h3>
+                    <p>The KCC scheme also allows a <strong>term loan component</strong> for investment purposes (e.g. purchasing farm equipment, establishing orchards or other capital investments). This might be issued as a separate term loan but linked to the KCC. Such term credit is usually included in the overall KCC limit as needed, and may have a longer repayment period. However, the interest subsidy scheme primarily targets the short-term crop loan portion of KCC.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Interest Rates and Interest Subvention</h2>
+                <button class="accordion-button">+</button>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    <p>The KCC scheme offers farmers loans at a <strong>concessional interest rate</strong>, supported by a Government of India <strong>Interest Subvention</strong> program. The current interest structure (as of 2025) is as follows:</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Component</th>
+                            <th>Rate/Details</th>
+                        </tr>
+                        <tr>
+                            <td>Base Interest Rate</td>
+                            <td><strong>7% per annum</strong> on short-term crop loans under KCC up to the subsidy limit (now ₹5 lakh)</td>
+                        </tr>
+                        <tr>
+                            <td>Government Interest Subvention to Banks</td>
+                            <td>The government, through the Modified Interest Subvention Scheme (MISS), provides an interest subvention of <strong>1.5%</strong> to the lending banks for these loans</td>
+                        </tr>
+                        <tr>
+                            <td>Prompt Repayment Incentive for Farmers</td>
+                            <td>Farmers who <strong>repay their KCC dues on time</strong> receive a further interest concession of <strong>3%</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Effective Interest Rate (with timely repayment)</td>
+                            <td><strong>4% per annum</strong></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="info-box">
+                        <p>Example: A KCC loan that would normally incur 7% interest annually will be reduced to a <strong>4% effective rate</strong> for a timely-paying borrower (the 3% difference is borne by the government as incentive). This encourages good credit discipline and reduces the cost of credit for conscientious farmers.</p>
+                    </div>
+                    
+                    <h3>Applicability:</h3>
+                    <p>The above 7%/4% interest scheme applies <strong>up to the loan limit of ₹5 lakh</strong> per farmer (as updated in Budget 2025-26). Any KCC credit beyond ₹5 lakh would not be eligible for interest subvention and would likely be charged at the bank's normal lending rate for agriculture. However, the vast majority of small and medium farmers have credit needs well within this subsidized limit.</p>
+                    
+                    <p>To summarize, through the interest subvention mechanism, <strong>farmers in Haryana with a KCC can avail crop loans at just 4% interest (effective)</strong>, provided timely repayment, for loan amounts up to ₹5 lakh. This policy makes formal credit very affordable compared to private moneylenders, and is a cornerstone of the KCC scheme's benefit to farmers.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Recent Circulars and Updates (2024–2025)</h2>
+                <button class="accordion-button">+</button>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    <p>Several important updates and official circulars have been issued recently to strengthen the KCC scheme and expand its benefits:</p>
+                    
+                    <h3>Increase in Collateral-Free Limit: <span class="updated-info">New 2025</span></h3>
+                    <p>In December 2024, the RBI announced (and the Government confirmed) an increase in the collateral-free agricultural loan limit from ₹1.6 lakh to <strong>₹2 lakh</strong>. This change took effect from <strong>1st January 2025</strong>, directing banks nationwide (including those in Haryana) to <strong>waive any collateral or margin requirements for loans up to ₹2 lakh</strong> under KCC.</p>
+                    
+                    <p>Banks were instructed to implement this immediately and publicize it so that farmers are aware of the relaxed security norm. This update directly helps small and marginal farmers by removing the hurdle of providing security for modest-sized loans.</p>
+                    
+                    <h3>Budget 2025-26 – Enhancement of KCC Loan Limit: <span class="updated-info">New 2025</span></h3>
+                    <p>The <strong>Union Budget 2025-26</strong> (presented in Feb 2025) announced a major boost to the KCC scheme. The Finance Minister increased the <strong>KCC loan amount eligible under the interest subsidy scheme from ₹3 lakh to ₹5 lakh</strong>.</p>
+                    
+                    <p>Practically, this means the government will support low-interest (4% effective) loans for a higher quantum per farmer. This announcement was made to support <strong>7.7 crore farmers, fishers and dairy producers</strong> nationwide who benefit from KCC.</p>
+                    
+                    <p>Following the budget, banks will align their KCC lending policies to allow higher credit limits where needed, and the RBI/Ministry of Finance will issue detailed guidelines to implement this enhanced limit.</p>
+                    
+                    <div class="info-box">
+                        <p>As of early 2025, this is a newly introduced change — banks in Haryana are expected to adopt it promptly as per the national policy.</p>
+                    </div>
+                    
+                    <h3>Continued KCC Coverage Drive:</h3>
+                    <p>The government has been running campaigns to <strong>saturate coverage of KCC</strong> among all eligible farmers. Notably, since 2020, special drives were launched to cover beneficiaries of PM-KISAN under KCC and to extend KCC to dairy, livestock, and fisheries sectors.</p>
+                    
+                    <p>In Haryana, these campaigns are coordinated by NABARD and the State Level Bankers' Committee. As a result, as of the latest data (December 2024), <strong>over 7.7 crore KCCs have been issued nationally</strong>, and Haryana's banking sector has contributed significantly to this number.</p>
+                    
+                    <p>The outstanding credit under operative KCC accounts in India crossed ₹10 lakh crore by late 2024, indicating the scale of the scheme. Haryana's farmers continue to benefit from ongoing efforts to bring any remaining uncovered farmers into the KCC fold.</p>
+                    
+                    <h3>Allied Activities Inclusion (2019):</h3>
+                    <p>While not in 2025, it's worth recalling a key relatively recent policy change: in <strong>2019</strong>, the KCC scheme was <strong>expanded to animal husbandry and fisheries</strong>. This was a significant broadening of scope, allowing pastoralists, dairy farmers, poultry farmers, fish farmers, etc., to avail credit on KCC terms.</p>
+                    
+                    <p>Haryana, with its substantial dairy and fisheries sectors, has implemented this change through its banks, and thousands of livestock/fishery farmers in the state have since received KCC credit for feed, veterinary care, and related working capital. This expansion continues to be reinforced in current policies, ensuring KCC is a comprehensive credit instrument for the agriculture sector at large.</p>
+                    
+                    <p>Each of these updates comes via official circulars/notifications to banks (for example, RBI circulars on collateral-free limits and interest subvention, and NABARD/Finance Ministry directives on KCC campaigns). The emphasis in 2024–25 has been on <strong>making farm credit more accessible (through collateral-free loans) and more affordable (through interest subsidies on larger limits)</strong>. All banks in Haryana are working under NABARD's and RBI's guidance to implement these directives, benefiting farmers across the state.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">
+                <h2>Sources</h2>
+                <button class="accordion-button">+</button>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    <div class="source-links">
+                        <p>Reserve Bank of India / Ministry of Agriculture – <em>Press Release on Collateral-Free Agricultural Loan Limit Increase (Dec 2024)</em></p>
+                        
+                        <p>Ministry of Finance – <em>Press Release on KCC Achievements & Budget 2025 Announcements (Feb 2025)</em></p>
+                        
+                        <p>Department of Financial Services (Finance Ministry) – <em>Agriculture Credit FAQs (Government of India Portal)</em></p>
+                        
+                        <p>Reserve Bank of India – <em>Master Circular on Kisan Credit Card Scheme</em> (guidelines for banks)</p>
+                        
+                        <p>NABARD / DFS – <em>Policy FAQs on NABARD Refinance and KCC Implementation</em></p>
+                        
+                        <p>Livemint News Report on Budget 2025 (for context of announcements)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Prepared by: Vipul Anand</p>
+            <p>Farmer & Web Developer from Kherishishgran, Pehowa 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordions = document.querySelectorAll('.accordion');
+            
+            accordions.forEach(accordion => {
+                const header = accordion.querySelector('.accordion-header');
+                const button = accordion.querySelector('.accordion-button');
+                
+                header.addEventListener('click', function() {
+                    accordion.classList.toggle('active');
+                    
+                    if (accordion.classList.contains('active')) {
+                        button.textContent = '−';
+                    } else {
+                        button.textContent = '+';
+                    }
+                });
+            });
+            
+            // Open the first accordion by default
+            if (accordions.length > 0) {
+                accordions[0].classList.add('active');
+                accordions[0].querySelector('.accordion-button').textContent = '−';
+            }
+        });
+    </script>
+</body>
+</html>
